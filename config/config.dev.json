@@ -1,0 +1,41 @@
+{
+    "mode" : "developer",
+    "front" : [
+        {
+            "protocal" : "http",
+            "name" : "jokenews",
+            "host" : "127.0.0.1",
+            "port" : "8088"
+        }
+    ],
+    "db" : {
+        "protocal" : "mongodb",
+        "address" : "127.0.0.1",
+        "port" : "27017",
+        "collection" : "jokenews"
+    },
+    "jwt" : {
+        "secret" : "joke",
+        "resecret" : "jokenews"
+    },
+    "upload" : {
+        "path" : "./public/uploads",
+        "type" : ["post","profile"],
+        "option" : {
+            "post" : {
+                "upload" : "post",
+                "resize" : {
+                    "size" : [ 480, 960, 1200 ]
+                },
+                "version" : "v1"
+            },
+            "profile" : {
+                "upload" : "profile",
+                "resize" : {
+                    "size" : [ 480, 960, 1200 ]
+                },
+                "version" : "v1"
+            }
+        }
+    }
+}

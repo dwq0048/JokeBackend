@@ -17,8 +17,6 @@ const login = (req, res, next) => {
 			uuid : uuidv4().toString(),
 			visitorId : req.body.visitorId,
 			cookie : (req.body.cookie) ? true : false,
-			session : (req.body.session) ? true : false,
-			local : (req.body.local) ? true : false,
 		}
 	}else{
 		UUID = JSON.parse(secretToken.decorative(req.cookies.GUEST_UD));
